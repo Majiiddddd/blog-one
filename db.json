@@ -1,0 +1,67 @@
+{
+    "articles" : [
+        {
+            "id" : 1,
+            "title" : "Article No.1",
+            "desc" : "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "image" : "https://dl.next1code.ir/images/react/article1.webp",
+            "readingTime" : 5,
+            "category" : "web Ai",
+            "Author" : "Majid Abolfathi"
+        },
+        {
+            "id" : 2,
+            "title" : "Article No.2",
+            "desc" : "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "image" : "https://dl.next1code.ir/images/react/article2.webp",
+            "readingTime" : 5,
+            "category" : "Frontend",
+            "Author" : "Majid Abolfathi"
+        },
+        {
+            "id" : 3,
+            "title" : "Article No.3",
+            "desc" : "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "image" : "https://dl.next1code.ir/images/react/article3.webp",
+            "readingTime" : 5,
+            "category" : "Logestic",
+            "Author" : "Majid Abolfathi"
+        },
+        {
+            "id" : 4,
+            "title" : "Article No.4",
+            "desc" : "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "image" : "https://dl.next1code.ir/images/react/article4.webp",
+            "readingTime" : 10,
+            "category" : "Backend",
+            "Author" : "Majid Abolfathi"
+        },
+        {
+            "id" : 5,
+            "title" : "Article No.5",
+            "desc" : "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "image" : "https://dl.next1code.ir/images/react/article5.webp",
+            "readingTime" : 7,
+            "category" : "Game",
+            "Author" : "Majid Abolfathi"
+        },
+        {
+            "id" : 6,
+            "title" : "Article No.6",
+            "desc" : "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "image" : "https://dl.next1code.ir/images/react/article6.webp",
+            "readingTime" : 2,
+            "category" : "Entertainment",
+            "Author" : "Majid Abolfathi"
+        },
+        {
+            "id" : 7,
+            "title" : "Article No.7",
+            "desc" : "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "image" : "https://dl.next1code.ir/images/react/article7.webp",
+            "readingTime" : 23,
+            "category" : "ChatGPT",
+            "Author" : "Majid Abolfathi"
+        }
+    ]
+}
