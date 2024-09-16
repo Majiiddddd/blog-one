@@ -62,6 +62,15 @@
             "readingTime" : 23,
             "category" : "ChatGPT",
             "Author" : "Majid Abolfathi"
+        },
+        {
+            "id" : 8,
+            "title" : "Article No.8",
+            "desc" : "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "image" : "https://dl.next1code.ir/images/react/article8.webp",
+            "readingTime" : 10,
+            "category" : "ChatGPT",
+            "Author" : "Majid Abolfathi"
         }
     ]
 }
