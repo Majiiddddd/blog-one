@@ -7,7 +7,7 @@ import axios from 'axios';
 function Home(){
     const [articles , setArticles] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:5000/articles").then((response) => setArticles(response.data));
+        axios.get("http://localhost:5001/articles").then((response) => setArticles(response.data));
     }, []);
 
     return(
