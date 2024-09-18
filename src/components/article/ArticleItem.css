@@ -13,6 +13,12 @@
     color: #5d5c5c;
 }
 
+.card a{
+    text-decoration: none;
+    color: #484848;
+
+}
+
 .read-more span{
     margin-right: 5px;
 }
