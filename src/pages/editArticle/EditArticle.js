@@ -15,6 +15,14 @@ function EditArticle(){
    } , [])
 
    const editArticleHandler = () =>{
+    axios.put(`http://localhost:5002/articles/${articleId}` , articleData) 
+
+    Swal.fire({
+        title: 'article edited!',
+        timer: 1500,
+        timerProgressBar: true,
+        showConfirmButton : false
+    })
 
    }
    const formHandler = (e)=>{
