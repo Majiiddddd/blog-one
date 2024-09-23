@@ -6,12 +6,16 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import { BiTimeFive, BiCategoryAlt } from "react-icons/bi";
 import { BsPencilSquare } from "react-icons/bs";
 import { MdDelete, MdOutlineEditCalendar } from "react-icons/md";
-import './Article.css';
+import "./Article.css";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Article() {
   const articleId = useParams().articleId;
 
   const [articleData, setArticleData] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -19,43 +23,73 @@ function Article() {
       .then((response) => setArticleData(response.data));
   }, []);
 
+  const deleteArticleHandler = (articleId) => {
+    Swal.fire({
+      title: "Are you sure?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "No!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(`http://localhost:5002/articles/${articleId}`);
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+
+        navigate("/");
+      }
+    });
+  };
+
+  
+
   return (
     <>
       <MyNavbar />
       <Container>
-        <Row style={{marginTop:'80px'}}>
+        <Row style={{ marginTop: "80px" }}>
           <Col lg={4}>
             <div className="articleCardContainer">
               <div className="cardHeader">
-                <img src="https://dl.next1code.ir/images/react/article1.webp" />
-                <h4>Article title</h4>
+                <img src={articleData.image} />
+                <h4>{articleData.title}</h4>
               </div>
               <div className="cardBody">
                 <p>
                   <BsPencilSquare size="20px" />
-                  Author: <b>Majid</b>
+                  Author: <b>{articleData.Author}</b>
                 </p>
                 <p>
                   <BiTimeFive size="20px" />
-                  Duration: <b>5min</b>
+                  Duration: <b>{articleData.readingTime}min</b>
                 </p>
                 <p>
                   <BiCategoryAlt size="20px" />
-                  Category: <b>Web</b>
+                  Category: <b>{articleData.category}</b>
                 </p>
               </div>
               <div className="cardFooter">
-                <Button variant="outline-danger">
+                <Button
+                  onClick={() => deleteArticleHandler(articleId)}
+                  variant="outline-danger"
+                >
                   <MdDelete size="20px" />
                 </Button>
-                <Button variant="outline-primary">
-                  <MdOutlineEditCalendar size="20px" />
-                </Button>
+                <Link to={`/edit-article/${articleId}`}>
+                  <Button variant="outline-primary">
+                    <MdOutlineEditCalendar size="20px" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </Col>
 
-          <Col lg={8} style={{textAlign : 'justify'}}>
+          <Col lg={8} style={{ textAlign: "justify" }}>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu
               diam consequat, faucibus risus vel, accumsan est. Ut volutpat
@@ -110,7 +144,7 @@ function Article() {
               ridiculus mus. Sed ultrices ullamcorper neque in consectetur.
             </p>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu
               diam consequat, faucibus risus vel, accumsan est. Ut volutpat
               augue eget tristique sagittis. Quisque pharetra odio euismod
               gravida malesuada. Proin quis augue suscipit, condimentum ante

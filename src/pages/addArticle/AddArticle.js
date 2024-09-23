@@ -45,6 +45,8 @@ function AddArticle() {
   const formHandler = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  
   return (
     <>
       <MyNavbar />
